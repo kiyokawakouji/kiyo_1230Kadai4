@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
-
     private var count: Int = 0
 
     override func viewDidLoad() {
@@ -28,4 +27,3 @@ class ViewController: UIViewController {
         resultLabel.text = "\(count)"
     }
 }
-
