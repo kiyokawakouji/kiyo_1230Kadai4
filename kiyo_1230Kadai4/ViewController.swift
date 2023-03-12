@@ -9,14 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var resultLabel: UILabel!
+
+    private var count: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        resultLabel.text = "\(count)"
     }
 
-    // TODO: ラベルは初期状態では「0」と表示させる
-    // TODO: +1ボタンの設置
-    // TODO: clearボタンの設置
+    @IBAction private func countUpButton(_ sender: Any) {
+        count += 1
+        resultLabel.text = "\(count)"
+    }
 
+    @IBAction private func clearButton(_ sender: Any) {
+        count = 0
+        resultLabel.text = "\(count)"
+    }
 }
 
